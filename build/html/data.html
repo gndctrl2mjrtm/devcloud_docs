@@ -1,0 +1,261 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Data Management &mdash; Intel DevCloud 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Programming Languages" href="languages.html" />
+    <link rel="prev" title="Running Multiple Jobs" href="multi_job.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Developer Resources:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Get Started with the Intel DevCloud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="connect.html">How to Connect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="job.html">Basic Job Submission</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multi_job.html">Running Multiple Jobs</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Data Management</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#storage-quota">Storage Quota</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#scratch-space">Scratch Space</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="languages.html">Programming Languages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ml_frameworks.html">Supported Machine Learning Frameworks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ml_projects.html">Included Machine Learning Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_tools.html">Python Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="resources.html">More Resources</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Intel DevCloud</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Data Management</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/data.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="data-management">
+<h1>Data Management<a class="headerlink" href="#data-management" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li>Do not use /tmp.</li>
+<li>Home folder is NFS-shared between the login node and the compute nodes.</li>
+<li>Some machine learning datasets can be found in /data/</li>
+</ul>
+<div class="section" id="storage-quota">
+<h2>Storage Quota<a class="headerlink" href="#storage-quota" title="Permalink to this headline">¶</a></h2>
+<p>Your account on Intel® AI DevCloud will have a storage quota. You can view your current usage with the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">u21356</span><span class="nd">@c009</span> <span class="o">~</span><span class="p">]</span> <span class="n">getquota</span>
+<span class="go">23.06 GB out of 200.00 GB (11.53%) used</span>
+</pre></div>
+</div>
+<p>You are free to write data up to this limit, but note that if you reach this quota your applications will no longer be able to write any more data to your home directory. To reduce your usage, simply remove unwanted files. For special cases, you can request additional quota by emailing with the requested value and the details of the workload that requires this additional quota.</p>
+<p>If you reach 90% of your quota, we send a courtesy email to let you know that you are approaching the limit. Once again, it is perfectly okay to use all the quota space available to you. Just remember that you will not be able to write any more data once you reach it.</p>
+</div>
+<div class="section" id="scratch-space">
+<h2>Scratch Space<a class="headerlink" href="#scratch-space" title="Permalink to this headline">¶</a></h2>
+<p>When you submit a job through qsub, or if you are using JupyterNotebook, you will have access to a local scratch directory on the compute node. The location of this directory is stored in environment variable PBS_SCRATCHDIR</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; [u21356@c009-nXXX ~] echo $PBS_SCRATCHDIR
+/local/12345/
+</pre></div>
+</div>
+<p>This is a temporary scratch directory that you can use to get additional I/O bandwidth for applications that uses heavy I/O operations. However, there are two things to keep in mind when using this directory</p>
+<p>This directory is deleted at the end of your job (or JupyterNotebook session). If there are data that you wish to keep, make sure to copy it back to your home directory.</p>
+<p>This directory is local and not shared by other nodes. If you have requested multiple nodes in your job, each compute node will have their own local scratch directory.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="languages.html" class="btn btn-neutral float-right" title="Programming Languages" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="multi_job.html" class="btn btn-neutral" title="Running Multiple Jobs" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Intel(r) Coporation
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>  
+
+  <style>
+    /* Sidebar header (and topbar for mobile) */
+    .wy-side-nav-search, .wy-nav-top {
+      background: #ffffff;
+    }
+    /* Sidebar */
+    .wy-nav-side {
+      background: #0661A9;
+    }
+  </style>
+
+
+</body>
+</html>

@@ -1,0 +1,313 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Intel® DevCloud Documentation &mdash; Intel DevCloud 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Get Started with the Intel DevCloud" href="getting_started.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="#">
+          
+
+          
+            
+            <img src="_static/logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Developer Resources:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Get Started with the Intel DevCloud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="connect.html">How to Connect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="job.html">Basic Job Submission</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multi_job.html">Running Multiple Jobs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data.html">Data Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="languages.html">Programming Languages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ml_frameworks.html">Supported Machine Learning Frameworks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ml_projects.html">Included Machine Learning Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_tools.html">Python Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="resources.html">More Resources</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">Intel DevCloud</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#">Docs</a> &raquo;</li>
+        
+      <li>Intel® DevCloud Documentation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="intel-devcloud-documentation">
+<h1>Intel® DevCloud Documentation<a class="headerlink" href="#intel-devcloud-documentation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="what-is-the-intel-ai-devcloud">
+<h2>What is the Intel® AI DevCloud?<a class="headerlink" href="#what-is-the-intel-ai-devcloud" title="Permalink to this headline">¶</a></h2>
+<p>The DevCloud is a cluster of Intel® Xeon® Scalable Processors that will assist you with your machine learning and deep learning training and inference compute needs. It provides access to precompiled software optimized for Intel® architecture on Intel® Xeon® Scalable Processors. It includes:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://ai.intel.com/neon-2-0-optimized-for-intel-architectures/">Intel® Software Optimization for neon™</a></li>
+<li><a class="reference external" href="https://ai.intel.com/tensorflow/">TensorFlow* on Intel® Architecture</a></li>
+<li><a class="reference external" href="https://ai.intel.com/caffe/">Intel® Distribution for Caffe*</a></li>
+<li><a class="reference external" href="https://software.intel.com/en-us/distribution-for-python">Intel® Distribution for Python* 2.7 and 3.6</a> including NumPy, SciPy, pandas, scikit-learn, Jupyter, matplotlib, and mpi4py</li>
+<li>Intel® Software Optimization for Keras*</li>
+<li><a class="reference external" href="https://ai.intel.com/theano/">Intel® Software Optimization for Theano*</a></li>
+<li>Intel AI platforms and technologies that become available in the future</li>
+</ul>
+<p>When you gain access to the DevCloud, you will log into a Linux-based head node of a batch farm. There you can stage your code and data, compile, and submit jobs to a queue. Once the queued job completes, your results will be in your home folder.</p>
+<ul class="simple">
+<li>Jobs are scheduled on Intel® Xeon® Scalable Processors.</li>
+<li>Each processor has 24 cores with 2-way hyper-threading.</li>
+<li>Each processor has access to 96 GB of on-platform RAM (DDR4</li>
+<li>Only one job will run on any processor at a time.</li>
+<li>You will get 200 GB of file storage quota.</li>
+<li>Your home directory is not visible to other users.</li>
+</ul>
+</div>
+<div class="section" id="who-can-sign-up-to-use-the-intel-ai-devcloud">
+<h2>Who can sign up to use the Intel® AI DevCloud?<a class="headerlink" href="#who-can-sign-up-to-use-the-intel-ai-devcloud" title="Permalink to this headline">¶</a></h2>
+<p>Developers, data scientists, professors, students, start-ups and others who are members of Intel® AI Academy are eligible to request access.</p>
+</div>
+<div class="section" id="how-do-i-become-a-member-of-the-intel-ai-academy">
+<h2>How do I become a member of the Intel® AI Academy?<a class="headerlink" href="#how-do-i-become-a-member-of-the-intel-ai-academy" title="Permalink to this headline">¶</a></h2>
+<p>You can join the AI Academy by requesting access to the DevCloud <a class="reference external" href="https://software.intel.com/en-us/ai-academy/devcloud">here</a>. or you can become a member by <a class="reference external" href="https://software.intel.com/en-us/ai/sign-up">registering</a>.</p>
+</div>
+<div class="section" id="how-much-do-i-have-to-pay-to-use-the-intel-ai-devcloud">
+<h2>How much do I have to pay to use the Intel® AI DevCloud?<a class="headerlink" href="#how-much-do-i-have-to-pay-to-use-the-intel-ai-devcloud" title="Permalink to this headline">¶</a></h2>
+<p>Nothing. It is free to the members of <a class="reference external" href="https://software.intel.com/en-us/ai-academy">Intel® AI Academy.</a>  To <a class="reference external" href="https://software.intel.com/en-us/ai/sign-up">join</a>  the AI Academy is also free.</p>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Developer Resources:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Get Started with the Intel DevCloud</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#intel-ai-academy">Intel AI Academy</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="connect.html">How to Connect</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="connect.html#access-to-resources">Access to Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="connect.html#access-via-a-jupyter-notebook">Access via a Jupyter Notebook</a></li>
+<li class="toctree-l2"><a class="reference internal" href="connect.html#if-you-connect-with-the-terminal">If you Connect with the Terminal</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="job.html">Basic Job Submission</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multi_job.html">Running Multiple Jobs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data.html">Data Management</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="data.html#storage-quota">Storage Quota</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html#scratch-space">Scratch Space</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="languages.html">Programming Languages</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="languages.html#python-and-conda">Python (and Conda)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="languages.html#using-c-c-or-fortran">Using C/C++ or Fortran</a></li>
+<li class="toctree-l2"><a class="reference internal" href="languages.html#using-r">Using R</a></li>
+<li class="toctree-l2"><a class="reference internal" href="languages.html#others">Others</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ml_frameworks.html">Supported Machine Learning Frameworks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ml_frameworks.html#tensorflow">TensorFlow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ml_frameworks.html#caffe">Caffe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ml_frameworks.html#torch">Torch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ml_frameworks.html#theano">Theano</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ml_frameworks.html#neon">Neon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ml_frameworks.html#mxnet">Mxnet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ml_frameworks.html#more-resources-for-machine-learning-frameworks">More Resources for Machine Learning Frameworks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ml_projects.html">Included Machine Learning Projects</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ml_projects.html#py-faster-rcnn">py-faster-rcnn</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="python_tools.html">Python Tools</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="python_tools.html#pip">pip</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="resources.html">More Resources</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="resources.html#intel-ai-academy">Intel AI Academy</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="getting_started.html" class="btn btn-neutral float-right" title="Get Started with the Intel DevCloud" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Intel(r) Coporation
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>  
+
+  <style>
+    /* Sidebar header (and topbar for mobile) */
+    .wy-side-nav-search, .wy-nav-top {
+      background: #ffffff;
+    }
+    /* Sidebar */
+    .wy-nav-side {
+      background: #0661A9;
+    }
+  </style>
+
+
+</body>
+</html>

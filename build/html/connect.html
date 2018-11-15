@@ -1,0 +1,249 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>How to Connect &mdash; Intel DevCloud 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Basic Job Submission" href="job.html" />
+    <link rel="prev" title="Get Started with the Intel DevCloud" href="getting_started.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Developer Resources:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Get Started with the Intel DevCloud</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">How to Connect</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#access-to-resources">Access to Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#access-via-a-jupyter-notebook">Access via a Jupyter Notebook</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#if-you-connect-with-the-terminal">If you Connect with the Terminal</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="job.html">Basic Job Submission</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multi_job.html">Running Multiple Jobs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data.html">Data Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="languages.html">Programming Languages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ml_frameworks.html">Supported Machine Learning Frameworks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ml_projects.html">Included Machine Learning Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_tools.html">Python Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="resources.html">More Resources</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Intel DevCloud</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>How to Connect</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/connect.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="how-to-connect">
+<h1>How to Connect<a class="headerlink" href="#how-to-connect" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="access-to-resources">
+<h2>Access to Resources<a class="headerlink" href="#access-to-resources" title="Permalink to this headline">¶</a></h2>
+<p>The cluster consists of multiple compute servers, which we call compute nodes, storage servers, and the login node. You can run a Jupyter Notebook session on one of the compute nodes. You can also access the login node using an SSH client in a text-based terminal. In both cases, if you want to use the full power of the cluster, you will need to submit jobs to a queue.</p>
+</div>
+<div class="section" id="access-via-a-jupyter-notebook">
+<h2>Access via a Jupyter Notebook<a class="headerlink" href="#access-via-a-jupyter-notebook" title="Permalink to this headline">¶</a></h2>
+<p>Your Jupyter Notebook instance runs on one of the compute nodes. When you execute the Notebook cells, they run on an Intel Xeon Scalable processor. There may be other people connecting to your compute node, which reduces the available compute power. However, you can reserve a full node for your job and even use multiple nodes at once by submitting scripts to the job queue. For more information,&nbsp; open the&nbsp;Welcome.ipynb&nbsp;file in your home directory.</p>
+</div>
+<div class="section" id="if-you-connect-with-the-terminal">
+<h2>If you Connect with the Terminal<a class="headerlink" href="#if-you-connect-with-the-terminal" title="Permalink to this headline">¶</a></h2>
+<p>Eight-word summary: <strong>do not run jobs on the login node</strong>
+When you log in, you will find yourself on the host c009, which is your login node. This node is intended only for code development and compilation, but NOT for computation. That is because it does not have much compute power, and, additionally, there are limitations on CPU time and RAM usage on the login node; your workload will be killed if it exceeds the limit. To run computational workloads on powerful compute nodes, you must submit a job through the Torque job queue. See next section&nbsp;for a sample job script.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="job.html" class="btn btn-neutral float-right" title="Basic Job Submission" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="getting_started.html" class="btn btn-neutral" title="Get Started with the Intel DevCloud" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Intel(r) Coporation
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>  
+
+  <style>
+    /* Sidebar header (and topbar for mobile) */
+    .wy-side-nav-search, .wy-nav-top {
+      background: #ffffff;
+    }
+    /* Sidebar */
+    .wy-nav-side {
+      background: #0661A9;
+    }
+  </style>
+
+
+</body>
+</html>

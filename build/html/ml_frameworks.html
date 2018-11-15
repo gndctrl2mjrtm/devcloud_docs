@@ -1,0 +1,355 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Supported Machine Learning Frameworks &mdash; Intel DevCloud 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Included Machine Learning Projects" href="ml_projects.html" />
+    <link rel="prev" title="Programming Languages" href="languages.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Developer Resources:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Get Started with the Intel DevCloud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="connect.html">How to Connect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="job.html">Basic Job Submission</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multi_job.html">Running Multiple Jobs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data.html">Data Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="languages.html">Programming Languages</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Supported Machine Learning Frameworks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#tensorflow">TensorFlow</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#tensorflow-1-10-0">TensorFlow 1.10.0</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tensorflow-1-7-0-and-multi-node-training-support">TensorFlow 1.7.0 and Multi-Node Training Support</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#caffe">Caffe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#torch">Torch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#theano">Theano</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#neon">Neon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mxnet">Mxnet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#more-resources-for-machine-learning-frameworks">More Resources for Machine Learning Frameworks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ml_projects.html">Included Machine Learning Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_tools.html">Python Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="resources.html">More Resources</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Intel DevCloud</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Supported Machine Learning Frameworks</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/ml_frameworks.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="supported-machine-learning-frameworks">
+<h1>Supported Machine Learning Frameworks<a class="headerlink" href="#supported-machine-learning-frameworks" title="Permalink to this headline">¶</a></h1>
+<p>Most machine learning frameworks are located in the /glob/deep-learning/ directory. Each directory points to the newest version of the compiler or interpreter that is available on the cluster. If you need a specific version, look in the “versions” directory.</p>
+<p>If the framework you require is not listed, you can try installing them locally on your home directory.</p>
+<div class="section" id="tensorflow">
+<h2>TensorFlow<a class="headerlink" href="#tensorflow" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tensorflow-1-10-0">
+<h3>TensorFlow 1.10.0<a class="headerlink" href="#tensorflow-1-10-0" title="Permalink to this headline">¶</a></h3>
+<p>TensorFlow 1.10.0 is already built into the Intel Distribution for Python installed on the cluster.
+The easiest way to access TensorFlow is to add the following lines to the ‘~/.bash_profile’ script.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; export PATH=/glob/intel-python/python2/bin/:/glob/development-tools/gcc/bin:$PATH
+&gt;&gt;&gt; export LD_LIBRARY_PATH=/glob/development-tools/gcc/lib64:$LD_LIBRARY_PATH
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Beware To use python 3 instead, change python2 to python3 in the first line.</p>
+</div>
+<p>You will have to either log out/back in or run the following for the changes to take effect:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">u21356</span><span class="nd">@c009</span> <span class="o">~</span><span class="p">]</span> <span class="n">source</span> <span class="o">~/.</span><span class="n">bash_profile</span>
+</pre></div>
+</div>
+<p>Conda users can install the latest Intel optimized Tensorflow by issuing the command below in their environment:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">u21356</span><span class="nd">@c009</span> <span class="o">~</span><span class="p">]</span> <span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">intel</span> <span class="n">tensorflow</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="tensorflow-1-7-0-and-multi-node-training-support">
+<h3>TensorFlow 1.7.0 and Multi-Node Training Support<a class="headerlink" href="#tensorflow-1-7-0-and-multi-node-training-support" title="Permalink to this headline">¶</a></h3>
+<p>This section discusses how to install TensorFlow 1.7.0 with multi-node training support</p>
+<p>First, we need to add a few paths to some environment variables. Add the followig lines to&nbsp;~/.bash_profile:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; export CC=/glob/development-tools/versions/gcc-6.4.0/bin/gcc
+&gt;&gt;&gt; export LD_LIBRARY_PATH=/glob/development-tools/versions/gcc-6.4.0/lib64/:$LD_LIBRARY_PATH
+&gt;&gt;&gt; source /glob/development-tools/parallel-studio/compilers_and_libraries/linux/mpi/bin64/mpivars.sh
+</pre></div>
+</div>
+<p>By default, you will be using and installing TF 1.7.0 on with Python 3. If you prefer to use Python 2 instead, change the following line so that python2 comes before python3:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; export PATH=/glob/intel-python/python3/bin/:/glob/intel-python/python2/bin/:${PATH}
+</pre></div>
+</div>
+<p>You will have to either log out/back in or run the following for the changes to take effect:</p>
+<p>&gt;&gt; [<a class="reference external" href="mailto:u21356&#37;&#52;&#48;c009">u21356<span>&#64;</span>c009</a> ~] source ~/.bash_profile</p>
+<p>The&nbsp;.whl&nbsp;file is precompiled for your convenience and available in&nbsp;/glob/. You can install this locally on your account by running the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">u21356</span><span class="nd">@c009</span> <span class="o">~</span><span class="p">]</span> <span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">user</span> <span class="o">/</span><span class="n">glob</span><span class="o">/</span><span class="n">deep</span><span class="o">-</span><span class="n">learning</span><span class="o">/</span><span class="n">versions</span><span class="o">/</span><span class="n">intel</span><span class="o">-</span><span class="n">tensorflow</span><span class="o">/</span><span class="n">tensorflow</span><span class="o">-</span><span class="mf">1.7</span><span class="o">.</span><span class="mi">0</span><span class="o">/</span><span class="n">tensorflow</span><span class="o">-</span><span class="mf">1.7</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">cp36</span><span class="o">-</span><span class="n">cp36m</span><span class="o">-</span><span class="n">linux_x86_64</span><span class="o">.</span><span class="n">whl</span>
+</pre></div>
+</div>
+<p>If you only require single-node, you are done! Your python should now use TensorFlow 1.7.0. Just remember that if you switch python versions, you will have to reinstall the&nbsp;.whl&nbsp;file using the corresponding version of&nbsp;pip.</p>
+<p>If you need multi-node support, there are few more dependencies you must install. First, install&nbsp;horovod&nbsp;using the following command.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">u21356</span><span class="nd">@c009</span> <span class="o">~</span><span class="p">]</span> <span class="n">CFLAGS</span><span class="o">=</span><span class="s2">&quot;-D_GLIBCXX_USE_CXX11_ABI=0&quot;</span> <span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">user</span> <span class="n">horovod</span>
+</pre></div>
+</div>
+<p>The&nbsp;CFLAGS&nbsp;argument is important, and will give you errors if you do not include it.
+Furthermore, there is currently an issue between TensorFlow 1.7.0 and the numpy package used by Intel Distribution of Python. So install numpy locally using the following command.</p>
+<p>&gt;&gt; [<a class="reference external" href="mailto:u21356&#37;&#52;&#48;c009">u21356<span>&#64;</span>c009</a> ~] pip install –user numpy==1.14.3</p>
+</div>
+</div>
+<div class="section" id="caffe">
+<h2>Caffe<a class="headerlink" href="#caffe" title="Permalink to this headline">¶</a></h2>
+<p>Caffe is already built into the Intel Distribution for Python installed on the cluster.</p>
+<p>By default, Caffe uses Intel Distribution for Python 2. If Python 3 is preferred, change the following line in the ‘~/.bash_profile’ script from ‘python2’ to ‘python3’</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; export PATH=/glob/intel-python/python2/bin/:$PATH
+</pre></div>
+</div>
+<p>You will have to either log out/back in or run the following for the changes to take effect:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">u21356</span><span class="nd">@c009</span> <span class="o">~</span><span class="p">]</span><span class="c1"># source ~/.bash_profile</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="torch">
+<h2>Torch<a class="headerlink" href="#torch" title="Permalink to this headline">¶</a></h2>
+<p>The easiest way to access Torch is to add the following lines to the ‘~/.bash_profile’ script.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">u21356</span><span class="nd">@c009</span> <span class="o">~</span><span class="p">]</span> <span class="n">source</span> <span class="o">/</span><span class="n">glob</span><span class="o">/</span><span class="n">deep</span><span class="o">-</span><span class="n">learning</span><span class="o">/</span><span class="n">torch</span><span class="o">/</span><span class="n">install</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">torch</span><span class="o">-</span><span class="n">activate</span>
+</pre></div>
+</div>
+<p>You will have to either log out/back in or run the following for the changes to take effect:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">u21356</span><span class="nd">@c009</span> <span class="o">~</span><span class="p">]</span> <span class="n">source</span> <span class="o">~/.</span><span class="n">bash_profile</span>
+</pre></div>
+</div>
+<p>Torch available on the cluster uses the&nbsp;Intel git repository for Torch.</p>
+</div>
+<div class="section" id="theano">
+<h2>Theano<a class="headerlink" href="#theano" title="Permalink to this headline">¶</a></h2>
+<p>To use Theano, run the following to copy the ‘.theanorc’ file.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">u21356</span><span class="nd">@c009</span> <span class="o">~</span><span class="p">]</span> <span class="n">cp</span> <span class="o">/</span><span class="n">glob</span><span class="o">/</span><span class="n">deep</span><span class="o">-</span><span class="n">learning</span><span class="o">/</span><span class="n">versions</span><span class="o">/</span><span class="n">intel</span><span class="o">-</span><span class="n">theano</span><span class="o">/</span><span class="n">theanorc_icc_mkl</span> <span class="o">~/.</span><span class="n">theanorc</span>
+</pre></div>
+</div>
+<p>Theano available on the cluster uses the&nbsp;Intel git repository for Theano.</p>
+</div>
+<div class="section" id="neon">
+<h2>Neon<a class="headerlink" href="#neon" title="Permalink to this headline">¶</a></h2>
+<p>Neon is already built into the Intel Distribution for Python installed on the cluster.</p>
+<p>By default, Neon uses Intel Distribution for Python 2. If Python 3 is preferred, change the following line in the ‘~/.bash_profile’ script from ‘python2’ to ‘python3’</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; export PATH=/glob/intel-python/python2/bin/:$PATH
+</pre></div>
+</div>
+<p>You will have to either log out/back in or run the following for the changes to take effect:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">u21356</span><span class="nd">@c009</span> <span class="o">~</span><span class="p">]</span> <span class="n">source</span> <span class="o">~/.</span><span class="n">bash_profile</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="mxnet">
+<h2>Mxnet<a class="headerlink" href="#mxnet" title="Permalink to this headline">¶</a></h2>
+<p>Mxnet is already built into the Intel Distribution for Python installed on the cluster.</p>
+<p>By default, Mxnet uses Intel Distribution for Python 2. If Python 3 is preferred, change the following line in the ‘~/.bash_profile’ script from ‘python2’ to ‘python3’</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; export PATH=/glob/intel-python/python2/bin/:$PATH
+</pre></div>
+</div>
+<p>You will have to either log out/back in or run the following for the changes to take effect:
+&gt;&gt;&gt; [<a class="reference external" href="mailto:u21356&#37;&#52;&#48;c009">u21356<span>&#64;</span>c009</a> ~] source ~/.bash_profile</p>
+</div>
+<div class="section" id="more-resources-for-machine-learning-frameworks">
+<h2>More Resources for Machine Learning Frameworks<a class="headerlink" href="#more-resources-for-machine-learning-frameworks" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ml_projects.html" class="btn btn-neutral float-right" title="Included Machine Learning Projects" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="languages.html" class="btn btn-neutral" title="Programming Languages" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Intel(r) Coporation
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>  
+
+  <style>
+    /* Sidebar header (and topbar for mobile) */
+    .wy-side-nav-search, .wy-nav-top {
+      background: #ffffff;
+    }
+    /* Sidebar */
+    .wy-nav-side {
+      background: #0661A9;
+    }
+  </style>
+
+
+</body>
+</html>

@@ -1,0 +1,292 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Programming Languages &mdash; Intel DevCloud 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Supported Machine Learning Frameworks" href="ml_frameworks.html" />
+    <link rel="prev" title="Data Management" href="data.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Developer Resources:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Get Started with the Intel DevCloud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="connect.html">How to Connect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="job.html">Basic Job Submission</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multi_job.html">Running Multiple Jobs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data.html">Data Management</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Programming Languages</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#python-and-conda">Python (and Conda)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#using-c-c-or-fortran">Using C/C++ or Fortran</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#using-r">Using R</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#others">Others</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ml_frameworks.html">Supported Machine Learning Frameworks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ml_projects.html">Included Machine Learning Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_tools.html">Python Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="resources.html">More Resources</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Intel DevCloud</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Programming Languages</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/languages.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="programming-languages">
+<h1>Programming Languages<a class="headerlink" href="#programming-languages" title="Permalink to this headline">¶</a></h1>
+<p>All compilers and interpreters, such as Intel Compiler or Python interpreter, are located in the /glob/development-tools/ directory. Each directory points to the newest version of the compiler or interpreter that is available on the cluster. If you need a specific version, look in the “versions” directory.</p>
+<div class="section" id="python-and-conda">
+<h2>Python (and Conda)<a class="headerlink" href="#python-and-conda" title="Permalink to this headline">¶</a></h2>
+<p>For best performance, use Intel Distribution for Python from /glob/intel-python/python3/bin/ and /glob/intel-python/python3/bin/. These paths are included in your environment by default.</p>
+<p>Conda is available for users that want to easily manage their environments. For best performance, create new environments using Intel Distribution for Python.</p>
+<p>To do this, first add Intel’s channel into Conda:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">u21356</span><span class="nd">@c009</span> <span class="o">~</span><span class="p">]</span> <span class="n">conda</span> <span class="n">config</span> <span class="o">--</span><span class="n">add</span> <span class="n">channels</span> <span class="n">intel</span>
+</pre></div>
+</div>
+<p>When creating your environment, you have the option of picking between core or full versions of Python 2 and 3.</p>
+<p>To create an environment with core Python 3:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">u21356</span><span class="nd">@c009</span> <span class="o">~</span><span class="p">]</span> <span class="n">conda</span> <span class="n">create</span> <span class="o">-</span><span class="n">n</span> <span class="o">&lt;</span><span class="n">nameofyourenv</span><span class="o">&gt;</span> <span class="n">intelpython3_core</span> <span class="n">python</span><span class="o">=</span><span class="mi">3</span>
+</pre></div>
+</div>
+<p>For core Python 2:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">u21356</span><span class="nd">@c009</span> <span class="o">~</span><span class="p">]</span> <span class="n">conda</span> <span class="n">create</span> <span class="o">-</span><span class="n">n</span> <span class="o">&lt;</span><span class="n">nameofyourenv</span><span class="o">&gt;</span> <span class="n">intelpython2_core</span> <span class="n">python</span><span class="o">=</span><span class="mi">2</span>
+</pre></div>
+</div>
+<p>To use the full version instead of core, replace “core” with “full”.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">u21356</span><span class="nd">@c009</span> <span class="o">~</span><span class="p">]</span> <span class="n">conda</span> <span class="n">create</span> <span class="o">-</span><span class="n">n</span> <span class="o">&lt;</span><span class="n">nameofyourenv</span><span class="o">&gt;</span> <span class="n">intelpython2_full</span> <span class="n">python</span><span class="o">=</span><span class="mi">2</span>
+</pre></div>
+</div>
+<p>In order to use the newly created environment, users will need to activate it.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">u21356</span><span class="nd">@c009</span> <span class="o">~</span><span class="p">]</span> <span class="n">source</span> <span class="n">activate</span> <span class="o">&lt;</span><span class="n">nameofyourenv</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>To leave the environment:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">u21356</span><span class="nd">@c009</span> <span class="o">~</span><span class="p">]</span> <span class="n">source</span> <span class="n">deactivate</span>
+</pre></div>
+</div>
+<p>The Intel channel provides a variety of Python versions. If a particular version is required, you can use the search option to see what is available. Intel distributed packages are tagged “[intel]”.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">u21356</span><span class="nd">@c009</span> <span class="o">~</span><span class="p">]</span> <span class="n">conda</span> <span class="n">search</span> <span class="o">-</span><span class="n">f</span> <span class="n">python</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="using-c-c-or-fortran">
+<h2>Using C/C++ or Fortran<a class="headerlink" href="#using-c-c-or-fortran" title="Permalink to this headline">¶</a></h2>
+<p>For best performance, Intel Compiler is recommended. The paths to the Intel compilers are included in your environment by default.
+For GCC, your environment will point to the system gcc (v4.8.5) by default. Add the following to your “~/.bash_profile” file to use the newest version of GCC that is available.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; export PATH=/glob/development-tools/gcc/bin/:$PATH
+</pre></div>
+</div>
+</div>
+<div class="section" id="using-r">
+<h2>Using R<a class="headerlink" href="#using-r" title="Permalink to this headline">¶</a></h2>
+<p>To use R, add the following to your “~/.bash_profile” file.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; export PATH=/glob/development-tools/R/bin/:$PATH
+</pre></div>
+</div>
+<p>R available on the cluster uses Intel Math Kernel Library as the backend math library.</p>
+</div>
+<div class="section" id="others">
+<h2>Others<a class="headerlink" href="#others" title="Permalink to this headline">¶</a></h2>
+<p>If the tool you require is not available, try install them locally in your home directory. If this is not possible, put in a feature request by posting it on the&nbsp;<a class="reference external" href="https://communities.intel.com/community/tech/intel-ai-academy/overview">Intel® AI Academy Forum</a></p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ml_frameworks.html" class="btn btn-neutral float-right" title="Supported Machine Learning Frameworks" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="data.html" class="btn btn-neutral" title="Data Management" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Intel(r) Coporation
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>  
+
+  <style>
+    /* Sidebar header (and topbar for mobile) */
+    .wy-side-nav-search, .wy-nav-top {
+      background: #ffffff;
+    }
+    /* Sidebar */
+    .wy-nav-side {
+      background: #0661A9;
+    }
+  </style>
+
+
+</body>
+</html>

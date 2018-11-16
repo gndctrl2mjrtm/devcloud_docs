@@ -1,0 +1,398 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Chainer Usage &mdash; Intel DevCloud 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Developer Resources:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Get Started with the Intel® AI DevCloud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="connect.html">How to Connect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="job.html">Basic Job Submission</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multi_job.html">Running Multiple Jobs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data.html">Data Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="languages.html">Programming Languages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ml_frameworks.html">Supported Machine Learning Frameworks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ml_projects.html">Included Machine Learning Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_tools.html">Python Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="resources.html">Resources and Help</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Intel DevCloud</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Chainer Usage</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/chainer.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="chainer-usage">
+<span id="id1"></span><h1>Chainer Usage<a class="headerlink" href="#chainer-usage" title="Permalink to this headline">¶</a></h1>
+<p>Chainer is a flexible framework for neural networks. It uses dynamic computational graph that uses define by run scheme, instead of the traditional define and run scheme. In define by run approach, network is defined dynamically via the actual forward computation. It stores the computation history instead of programming logic which enables us to fully leverage the power of programming logic in Python (Reference link: <a class="reference external" href="https://docs.chainer.org/en/stable/guides/define_by_run.html">https://docs.chainer.org/en/stable/guides/define_by_run.html</a> ). Chainer is useful in cases where there is a variation in input, for example, unstructured data like text. It is notably faster than other Python-oriented frameworks. Please refer <a class="reference external" href="https://docs.chainer.org/en/stable/">https://docs.chainer.org/en/stable/</a> for further details.</p>
+<p>The detailed instructions to install Chainer on Linux can be referred from: <a class="reference external" href="https://github.com/Intel/chainer">https://github.com/Intel/chainer</a> .</p>
+<p>Pre-requisite: Numpy&gt;1.9 need to be installed using below command</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pip</span> <span class="n">install</span> <span class="n">numpy</span>
+</pre></div>
+</div>
+<p>Please refer <a class="reference external" href="https://docs.chainer.org/en/stable/install.html">https://docs.chainer.org/en/stable/install.html</a> for further details.</p>
+<p>Chainer is integrated with the latest release of Intel® Math Kernel Library (Intel® MKL) for Deep Neural Networks optimized for Intel® AVX and Intel® AVX-512 instructions. These are supported in Intel® Xeon® and Intel® Xeon Phi™ processors. Please refer <a class="reference external" href="https://github.com/Intel/chainer">https://github.com/Intel/chainer</a> for more information.</p>
+<div class="section" id="what-is-imperative-programming">
+<h2>What is imperative programming?<a class="headerlink" href="#what-is-imperative-programming" title="Permalink to this headline">¶</a></h2>
+<p>Imperative programming is a programming paradigm in which the commands explain how the computation takes place, step by step. The commands enable the computer to accomplish the computation.</p>
+</div>
+<div class="section" id="how-to-use-the-gan-that-is-available-in-chainer">
+<h2>How to use the GAN that is available in Chainer?<a class="headerlink" href="#how-to-use-the-gan-that-is-available-in-chainer" title="Permalink to this headline">¶</a></h2>
+<p>The GAN available with Chainer is a DCGAN, which is an evolved form of GAN. The network provided here accepts a fixed size of input, 32x32x3. If an input of a different size is required for training, the network must be changed. You can find the implementation details from <a class="reference external" href="https://github.com/intel/chainer/tree/master/examples/dcgan">https://github.com/intel/chainer/tree/master/examples/dcgan</a> .</p>
+</div>
+<div class="section" id="what-are-the-differences-between-chainer-and-pytorch">
+<h2>What are the differences between Chainer and PyTorch?<a class="headerlink" href="#what-are-the-differences-between-chainer-and-pytorch" title="Permalink to this headline">¶</a></h2>
+<p>Chainer and PyTorch use dynamic computational graphs. Chainer is much more customizable as it is entirely written in Python, which makes it more mass appealing. For instance, to define a custom neural network layer only using python, it is much simpler to do so in Chainer than a framework with C/C++ as backend where one might need to hack the framework itself to modify/implement the custom function. Given this, all the python norms are inherently supported in Chainer. PyTorch is the python version of Torch (lua framework) and uses the same C backend. PyTorch actually started out as a fork of Chainer only with a different backend. The auto differentiation parts in PyTorch are based on Chainer.
+For further details, please refer to: <a class="reference external" href="https://docs.chainer.org/en/stable/comparison.html">https://docs.chainer.org/en/stable/comparison.html</a></p>
+</div>
+<div class="section" id="what-are-the-differences-between-chainer-and-tensorflow">
+<h2>What are the differences between Chainer and Tensorflow?<a class="headerlink" href="#what-are-the-differences-between-chainer-and-tensorflow" title="Permalink to this headline">¶</a></h2>
+<p>The differences between Chainer and Tensorflow are explained here: <a class="reference external" href="https://docs.chainer.org/en/stable/comparison.html">https://docs.chainer.org/en/stable/comparison.html</a></p>
+</div>
+<div class="section" id="what-is-chainercv">
+<h2>What is ChainerCV?<a class="headerlink" href="#what-is-chainercv" title="Permalink to this headline">¶</a></h2>
+<p>ChainerCV is a collection of tools to train and run neural networks for computer vision tasks using Chainer. Please refer to <a class="reference external" href="https://github.com/chainer/chainercv.git">https://github.com/chainer/chainercv.git</a> .</p>
+<p>Logging can be customized in Chainer using chainer.Reporter module. The observed current variables values can be reported using chainer.Reporter.report() function. For example:</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">chainer</span><span class="o">.</span><span class="n">reporter</span><span class="o">.</span><span class="n">report</span><span class="p">({</span><span class="s1">&#39;rpn_loc_loss&#39;</span><span class="p">:</span> <span class="n">rpn_loc_loss</span><span class="p">,</span>
+                         <span class="s1">&#39;rpn_cls_loss&#39;</span><span class="p">:</span> <span class="n">rpn_cls_loss</span><span class="p">,</span>
+                         <span class="s1">&#39;roi_loc_loss&#39;</span><span class="p">:</span> <span class="n">roi_loc_loss</span><span class="p">,</span>
+                         <span class="s1">&#39;roi_cls_loss&#39;</span><span class="p">:</span> <span class="n">roi_cls_loss</span><span class="p">,</span>
+                         <span class="s1">&#39;rpn_cls_accuracy&#39;</span><span class="p">:</span><span class="n">rpn_cls_accuracy</span><span class="p">,</span>
+                         <span class="s1">&#39;roi_cls_accuracy&#39;</span><span class="p">:</span><span class="n">roi_cls_accuracy</span><span class="p">,</span>
+                         <span class="s1">&#39;loss&#39;</span><span class="p">:</span> <span class="n">loss</span><span class="p">},</span>
+                        <span class="bp">self</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Where values without quotes are the variable that are calculated.
+Please go through <a class="reference external" href="https://docs.chainer.org/en/stable/guides/report">https://docs.chainer.org/en/stable/guides/report</a>.html# for more details.</p>
+</div>
+<div class="section" id="what-are-the-different-forms-to-save-the-model">
+<h2>What are the different forms to save the model?<a class="headerlink" href="#what-are-the-different-forms-to-save-the-model" title="Permalink to this headline">¶</a></h2>
+<p>We can save a model in chainer using chainer.serializers module. Serializer is a simple interface to serialize or deserialize an object. Model saving can be done in two formats:
+- NPZ
+- HDF5</p>
+<div class="section" id="saving-and-loading-in-npz-format">
+<h3>Saving and loading in NPZ Format<a class="headerlink" href="#saving-and-loading-in-npz-format" title="Permalink to this headline">¶</a></h3>
+<p>Save using the following command:</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">chainer</span> <span class="k">import</span> <span class="n">serializers</span>
+<span class="n">serializers</span><span class="o">.</span><span class="n">save_npz</span><span class="p">(</span><span class="s1">&#39;mymodel.npz&#39;</span><span class="p">,</span> <span class="n">model</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Load using the following command:</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">serializers</span><span class="o">.</span><span class="n">load_npz</span><span class="p">(</span><span class="s1">&#39;mymodel.npz&#39;</span><span class="p">,</span> <span class="n">model</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="saving-and-loading-in-hdf5-format">
+<h3>Saving and loading in HDF5 format<a class="headerlink" href="#saving-and-loading-in-hdf5-format" title="Permalink to this headline">¶</a></h3>
+<p>Save using the following command:</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">chainer</span> <span class="k">import</span> <span class="n">serializers</span>
+<span class="n">serializers</span><span class="o">.</span><span class="n">save_hdf5</span><span class="p">(</span><span class="s1">&#39;mymodel.hdf5&#39;</span><span class="p">,</span> <span class="n">model</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Load using the following command:</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">serializers</span><span class="o">.</span><span class="n">load_hdf5</span><span class="p">(</span><span class="s1">&#39;mymodel.hdf5&#39;</span><span class="p">,</span> <span class="n">model</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>For more information, refer to <a class="reference external" href="https://docs.chainer.org/en/stable/guides/serializers.html">https://docs.chainer.org/en/stable/guides/serializers.html</a> .</p>
+</div>
+</div>
+<div class="section" id="what-is-ideep-how-much-performance-improvement-can-we-achieve-with-the-use-of-ideep-in-chainer">
+<h2>What is iDeep? How much performance improvement can we achieve with the use of iDeep in Chainer?<a class="headerlink" href="#what-is-ideep-how-much-performance-improvement-can-we-achieve-with-the-use-of-ideep-in-chainer" title="Permalink to this headline">¶</a></h2>
+<p>iDeep is a module that provides NumPy-like API and DNN acceleration using MKL-DNN for Intel® CPUs. It utilizes vector instructions of CPU. Please refer to <a class="reference external" href="https://github.com/intel/ideep">https://github.com/intel/ideep</a> for more details.
+For MNIST Classifier which is using MLP (Multi-layer Perceptron), we got around 16% performance improvement whereas for CIFAR-10 Classifier which is using CNN, it is around 94%.</p>
+</div>
+<div class="section" id="how-to-configure-ideep-with-chainer">
+<h2>How to configure iDeep with Chainer?<a class="headerlink" href="#how-to-configure-ideep-with-chainer" title="Permalink to this headline">¶</a></h2>
+<p>Please refer to <a class="reference external" href="https://docs.chainer.org/en/stable/tips.html#how-do-i-accelerate-my-model-using-ideep-on">https://docs.chainer.org/en/stable/tips.html#how-do-i-accelerate-my-model-using-ideep-on</a>-Intel®-cpu for configuring iDeep with Chainer.</p>
+</div>
+<div class="section" id="what-is-chainer-rl">
+<h2>What is Chainer RL?<a class="headerlink" href="#what-is-chainer-rl" title="Permalink to this headline">¶</a></h2>
+<p>It is a deep RL library that implements various state-of-the-art deep reinforcement algorithms in Python using Chainer.
+You can use this link to quickstart Chainer RL: <a class="reference external" href="https://github.com/chainer/chainerrl/blob/master/examples/quickstart/quickstart.ipynb">https://github.com/chainer/chainerrl/blob/master/examples/quickstart/quickstart.ipynb</a></p>
+</div>
+<div class="section" id="how-to-perform-object-detection-in-chainercv-for-a-custom-data">
+<h2>How to perform Object Detection in ChainerCV for a custom data?<a class="headerlink" href="#how-to-perform-object-detection-in-chainercv-for-a-custom-data" title="Permalink to this headline">¶</a></h2>
+<p>Object Detection in Chainer can be achieved using inbuilt Chainer module called ChainerCV. Here we are considering Oxford pets dataset (<a class="reference external" href="http://www.robots.ox.ac.uk/~vgg/data/pets/">http://www.robots.ox.ac.uk/~vgg/data/pets/</a> )
+Pets Dataset contains both xml and jpeg files. All the xml files has name which contain either cat or dog not with the breed names. So modified all xml files with breed names at name tag.
+In pets dataset there are predefined shuffled jpeg and xml files for both test and train which are saved in the form of trainval.txt and test.txt. But either trainval.txt or test.txt are in the format of file name, xmin, ymin, xmax, ymax where as our file expects input in the form of just file name.  So modified the files accordingly.</p>
+<p>Follow below steps to download ChainerCV.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cd</span> <span class="o">~</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">chainer</span><span class="o">/</span><span class="n">chainercv</span><span class="o">.</span><span class="n">git</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cd</span> <span class="o">~/</span><span class="n">chainercv</span>
+</pre></div>
+</div>
+<p>For loading customized data the following need to be updated
+Modify pascal voc 2007 and 2012 datasets with customized data.
+Paths in ` chainercv/examples/ssd/train.py` file. Modify below lines</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">train</span> <span class="o">=</span> <span class="n">TransformDataset</span><span class="p">(</span><span class="n">ConcatenatedDataset</span><span class="p">(</span><span class="n">VOCBboxDataset</span><span class="p">(</span><span class="n">year</span><span class="o">=</span><span class="s1">&#39;2007&#39;</span><span class="p">,</span> <span class="n">split</span><span class="o">=</span><span class="s1">&#39;trainval&#39;</span><span class="p">),</span> <span class="n">VOCBboxDataset</span><span class="p">(</span><span class="n">year</span><span class="o">=</span><span class="s1">&#39;2012&#39;</span><span class="p">,</span> <span class="n">split</span><span class="o">=</span><span class="s1">&#39;trainval&#39;</span><span class="p">)</span> <span class="p">),</span> <span class="n">Transform</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">coder</span><span class="p">,</span> <span class="n">model</span><span class="o">.</span><span class="n">insize</span><span class="p">,</span> <span class="n">model</span><span class="o">.</span><span class="n">mean</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>To below code</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">train</span> <span class="o">=</span> <span class="n">TransformDataset</span><span class="p">(</span><span class="n">ConcatenatedDataset</span><span class="p">(</span><span class="n">VOCBboxDataset</span><span class="p">(</span><span class="n">split</span><span class="o">=</span><span class="s1">&#39;trainval&#39;</span><span class="p">)),</span> <span class="n">Transform</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">coder</span><span class="p">,</span> <span class="n">model</span><span class="o">.</span><span class="n">insize</span><span class="p">,</span> <span class="n">model</span><span class="o">.</span><span class="n">mean</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Modify labels variable in ~/.conda/envs/&lt;conda_env_name&gt;/lib/python3.6/site-packages/chainercv/datasets/voc/voc_utils.py as below</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">voc_bbox_label_names</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;aeroplane&#39;</span><span class="p">,</span><span class="o">..</span><span class="p">,</span><span class="n">etc</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>To customized class labels like below</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">voc_bbox_label_names</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39; abyssinian&#39;</span><span class="p">,</span> <span class="s1">&#39;american_bulldog&#39;</span><span class="o">..</span><span class="p">,</span><span class="n">etc</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Modify below lines in ~/.conda/envs/&lt;conda_env_name&gt;/lib/python3.6/site-packages/chainercv/datasets/voc/voc_bbox_dataset.py
+Data_dir parameter in init function need to be updated with customized data located path like below</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">data_dir</span><span class="o">=</span><span class="s1">&#39;/home/&lt;user_id&gt;/chainer/data&#39;</span>
+</pre></div>
+</div>
+<p>Path of id_list_file need to updated with customized split file like below</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">id_list_file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_dir</span><span class="p">,</span> <span class="s1">&#39;annotations/</span><span class="si">{0}</span><span class="s1">.txt&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">split</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>In the above example, trainval.txt is stored in /home/&lt;user_id&gt;/chainer/data/annotations/ where trainval can be passed at split variable while calling VOCBboxDataset()</p>
+<p>Few .xml files of trainval.txt are missed in pets data which interrupts the training. So adding below code will help to skip and continue with training even if there are no .xml files.</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="bp">self</span><span class="o">.</span><span class="n">data_dir</span> <span class="o">=</span> <span class="n">data_dir</span> <span class="c1"># this line need to be remove from the below and add above self.ids line as mentioned</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">ids</span> <span class="o">=</span> <span class="p">[</span><span class="n">id_</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">for</span> <span class="n">id_</span> <span class="ow">in</span> <span class="nb">open</span><span class="p">(</span><span class="n">id_list_file</span><span class="p">)]</span>
+</pre></div>
+</div>
+<p>After this below line need to be added</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="bp">self</span><span class="o">.</span><span class="n">ids</span><span class="o">=</span><span class="p">[</span> <span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">ids</span> <span class="k">if</span><span class="p">(</span><span class="n">Path</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data_dir</span><span class="p">,</span><span class="s1">&#39;annotations/xmls_bkp/&#39;</span><span class="p">,</span> <span class="n">i</span> <span class="o">+</span><span class="s1">&#39;.xml&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">is_file</span><span class="p">())]</span>
+</pre></div>
+</div>
+<p>Update Images path in _get_image function as below</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">img_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data_dir</span><span class="p">,</span> <span class="s1">&#39;images/&#39;</span><span class="p">,</span> <span class="n">id_</span> <span class="o">+</span> <span class="s1">&#39;.jpg&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>where .jpegs are in images/ directory having parent directory /home/&lt;user_id&gt;/chainer/data</p>
+<p>Update Annotations path in _get_annotations function as below</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">anno</span> <span class="o">=</span> <span class="n">ET</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data_dir</span><span class="p">,</span> <span class="s1">&#39;annotations/xmls_bkp/&#39;</span><span class="p">,</span> <span class="n">id_</span> <span class="o">+</span> <span class="s1">&#39;.xml&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Add below lines to avoid error while reading .xml files</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Modify it to below lines</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">ex</span> <span class="ow">in</span> <span class="n">anno</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s1">&#39;filename&#39;</span><span class="p">):</span>
+<span class="n">filename</span> <span class="o">=</span> <span class="n">ex</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+<span class="n">name</span><span class="o">=</span><span class="n">filename</span><span class="o">.</span><span class="n">rsplit</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">,</span><span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="how-to-tweak-code-to-get-n-boundary-boxes-for-each-object">
+<h2>How to tweak code to get “N” boundary boxes for each object?<a class="headerlink" href="#how-to-tweak-code-to-get-n-boundary-boxes-for-each-object" title="Permalink to this headline">¶</a></h2>
+<p>To draw “N” boundary boxes, modify the code in /home/&lt;user_id&gt;/.conda/envs/&lt;conda_env_name&gt; /lib/python3.6/site-packages/chainercv/visualizations/vis_bbox.py</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">bb</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">bbox</span><span class="p">):</span>
+</pre></div>
+</div>
+<p>Change line to:</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">bb</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">bbox</span><span class="p">[:</span><span class="n">N</span><span class="p">,:]):</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="how-to-tweak-code-to-get-boundary-boxes-when-model-inference-accuracy-is-poor">
+<h2>How to tweak code to get boundary boxes when model inference accuracy is poor?<a class="headerlink" href="#how-to-tweak-code-to-get-boundary-boxes-when-model-inference-accuracy-is-poor" title="Permalink to this headline">¶</a></h2>
+<p>We can do it by changing the threshold value.</p>
+<p>For example, if you are using Faster- RCNN, in the file /home/&lt;user_id&gt;/.conda/envs/&lt;conda_env_name&gt;/lib/python3.6/site-packages/chainercv/links/model/faster_rcnn/faster_rcnn.py, you need to change the value of self.score_thresh</p>
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">preset</span> <span class="o">==</span> <span class="s1">&#39;visualize&#39;</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nms_thresh</span> <span class="o">=</span> <span class="mf">0.3</span>
+        <span class="c1">#self.score_thresh = 0.7 (line to be changed as below)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">score_thresh</span> <span class="o">=</span> <span class="mf">0.45</span> <span class="p">(</span><span class="nb">set</span> <span class="n">based</span> <span class="n">on</span> <span class="n">the</span> <span class="n">model</span> <span class="n">accuracy</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Intel(r) Coporation
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>  
+
+  <style>
+    /* Sidebar header (and topbar for mobile) */
+    .wy-side-nav-search, .wy-nav-top {
+      background: #ffffff;
+    }
+    /* Sidebar */
+    .wy-nav-side {
+      background: #0661A9;
+    }
+  </style>
+
+
+</body>
+</html>

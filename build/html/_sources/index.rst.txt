@@ -72,6 +72,8 @@ Nothing. It is free to the members of `Intel® AI Academy. <https://software.int
 
    ml_frameworks
 
+   chainer
+
    ml_projects
 
    python_tools

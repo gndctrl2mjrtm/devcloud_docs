@@ -110,5 +110,12 @@ By default, Mxnet uses Intel Distribution for Python 2. If Python 3 is preferred
 You will have to either log out/back in or run the following for the changes to take effect:
 >>> [u21356@c009 ~] source ~/.bash_profile
 
-More Resources for Machine Learning Frameworks
-----------------------------------------------
+Chainer
+-------
+
+To learn how to use Chainer for machine learning, go to :ref:`chainer-usage`.
+
+
+
+
+

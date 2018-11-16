@@ -80,7 +80,7 @@
             
               <p class="caption"><span class="caption-text">Developer Resources:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Get Started with the Intel DevCloud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Get Started with the Intel® AI DevCloud</a></li>
 <li class="toctree-l1"><a class="reference internal" href="connect.html">How to Connect</a></li>
 <li class="toctree-l1"><a class="reference internal" href="job.html">Basic Job Submission</a></li>
 <li class="toctree-l1"><a class="reference internal" href="multi_job.html">Running Multiple Jobs</a></li>
@@ -295,7 +295,7 @@ For output logs, use qpeek:</p>
 <p>Check your completed job logs as follows:</p>
 <ul class="simple">
 <li>If you gave a name when submitting a job using qsub, the log files will be &lt;JOB_NAME&gt;.o&lt;JOB_ID&gt; and &lt;JOB_NAME&gt;.e&lt;JOB_ID&gt;</li>
-<li>If you did not give a name and you submitted a job as qsub &lt;JOB_SCRIPT&gt;, the log files are &lt;<a href="#id1"><span class="problematic" id="id2">JOB_</span></a> SCRIPT&gt;.o&lt;JOB_ID&gt; and &lt;<a href="#id3"><span class="problematic" id="id4">JOB_</span></a> SCRIPT&gt;.e&lt;JOB_ID&gt;</li>
+<li>If you did not give a name and you submitted a job as qsub &lt;JOB_SCRIPT&gt;, the log files are &lt;JOB_SCRIPT&gt;.o&lt;JOB_ID&gt; and &lt;JOB_SCRIPT&gt;.e&lt;JOB_ID&gt;</li>
 <li>If you did not give a name and you submitted a job as &lt;COMMAND&gt; | qsub, the log files are STDIN.o&lt;JOB_ID&gt; and STDIN.e&lt;JOB_ID&gt;</li>
 </ul>
 </div>
@@ -306,7 +306,7 @@ For output logs, use qpeek:</p>
 </pre></div>
 </div>
 <p>Add wall time in bash script before running in qsub mode:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="ch">#!/bin/sh#PBS -l walltime=24:00:00 python sample.py</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; !/bin/sh#PBS -l walltime=24:00:00 python sample.py
 </pre></div>
 </div>
 </div>
@@ -326,7 +326,7 @@ For output logs, use qpeek:</p>
 <div class="section" id="how-do-i-increase-the-wall-clock-time">
 <h3>How do I increase the wall clock time?<a class="headerlink" href="#how-do-i-increase-the-wall-clock-time" title="Permalink to this headline">¶</a></h3>
 <p>In the command line, type one of the following:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1">#PBS -l walltime=&lt;10:30&gt;,mem=320kb</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">PBS</span> <span class="o">-</span><span class="n">l</span> <span class="n">walltime</span><span class="o">=&lt;</span><span class="mi">10</span><span class="p">:</span><span class="mi">30</span><span class="o">&gt;</span><span class="p">,</span><span class="n">mem</span><span class="o">=</span><span class="mi">320</span><span class="n">kb</span>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">echo</span> <span class="n">sleep</span> <span class="mi">1000</span> <span class="o">|</span> <span class="n">qsub</span> <span class="o">-</span><span class="n">l</span> <span class="n">walltime</span><span class="o">=&lt;</span><span class="mi">00</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mi">00</span><span class="o">&gt;</span>

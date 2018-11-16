@@ -80,7 +80,7 @@
             
               <p class="caption"><span class="caption-text">Developer Resources:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Get Started with the Intel DevCloud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Get Started with the Intel® AI DevCloud</a></li>
 <li class="toctree-l1"><a class="reference internal" href="connect.html">How to Connect</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Basic Job Submission</a></li>
 <li class="toctree-l1"><a class="reference internal" href="multi_job.html">Running Multiple Jobs</a></li>
@@ -89,7 +89,8 @@
 <li class="toctree-l1"><a class="reference internal" href="ml_frameworks.html">Supported Machine Learning Frameworks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ml_projects.html">Included Machine Learning Projects</a></li>
 <li class="toctree-l1"><a class="reference internal" href="python_tools.html">Python Tools</a></li>
-<li class="toctree-l1"><a class="reference internal" href="resources.html">More Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="resources.html">Resources and Help</a></li>
 </ul>
 
             
@@ -165,17 +166,17 @@
 </div>
 <p>The first line ensures that the script runs in the same directory as where you have submitted it. And the second line runs the Python application.
 You can submit this job with:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">u21356</span><span class="nd">@c009</span> <span class="o">~</span><span class="p">]</span><span class="c1"># qsub myjob</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">u21356</span><span class="nd">@c009</span> <span class="o">~</span><span class="p">]</span> <span class="n">qsub</span> <span class="n">myjob</span>
 </pre></div>
 </div>
 <p>This command will return a Job ID, which is the tracking number for your job.
 You can track the job with:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">u21356</span><span class="nd">@c009</span> <span class="o">~</span><span class="p">]</span><span class="c1"># qstat</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">u21356</span><span class="nd">@c009</span> <span class="o">~</span><span class="p">]</span> <span class="n">qstat</span>
 </pre></div>
 </div>
 <p>Once it is complete, the output will be in the files:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">u21356</span><span class="nd">@c009</span> <span class="o">~</span><span class="p">]</span><span class="c1"># cat myjob.oXXXXXX</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">u21356</span><span class="nd">@c009</span> <span class="o">~</span><span class="p">]</span><span class="c1"># cat myjob.eXXXXXX</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">u21356</span><span class="nd">@c009</span> <span class="o">~</span><span class="p">]</span> <span class="n">cat</span> <span class="n">myjob</span><span class="o">.</span><span class="n">oXXXXXX</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">u21356</span><span class="nd">@c009</span> <span class="o">~</span><span class="p">]</span> <span class="n">cat</span> <span class="n">myjob</span><span class="o">.</span><span class="n">eXXXXXX</span>
 </pre></div>
 </div>
 <p>Here ‘XXXXXX’ is the Job ID. The .o file contains the standard output stream, and .e file contains the error stream.</p>

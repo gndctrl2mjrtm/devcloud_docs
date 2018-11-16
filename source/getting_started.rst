@@ -1,10 +1,16 @@
 Get Started with the Intel® AI DevCloud
 =======================================
 
+.. image:: images/academy.png
+   :width: 600pt
+
 Join the Intel® AI Academy to Sign Up for DevCloud
 --------------------------------------------------
 
 The `Intel® AI Academy <https://software.intel.com/en-us/ai-academy>`_ provides free courses, resources, and training for AI students and professors. `Join <https://software.intel.com/en-us/ai/sign-up>`_ to get the latest news about Intel AI and recieve free access to DevCloud.
+
+.. image:: images/webinar.png
+   :width: 600pt
 
 Getting Started with the Intel® AI DevCloud Webinar Replay
 ----------------------------------------------------------

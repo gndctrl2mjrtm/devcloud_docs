@@ -95,7 +95,7 @@ How do I check the logs of my completed job?
 Check your completed job logs as follows:
  
 - If you gave a name when submitting a job using qsub, the log files will be <JOB_NAME>.o<JOB_ID> and <JOB_NAME>.e<JOB_ID>
-- If you did not give a name and you submitted a job as qsub <JOB_SCRIPT>, the log files are <JOB_ SCRIPT>.o<JOB_ID> and <JOB_ SCRIPT>.e<JOB_ID>
+- If you did not give a name and you submitted a job as qsub <JOB_SCRIPT>, the log files are <JOB_SCRIPT>.o<JOB_ID> and <JOB_SCRIPT>.e<JOB_ID>
 - If you did not give a name and you submitted a job as <COMMAND> | qsub, the log files are STDIN.o<JOB_ID> and STDIN.e<JOB_ID>
 
 How do I set total wall clock time to the maximum on the Intel AI DevCloud?

@@ -18,11 +18,13 @@ The DevCloud is a cluster of Intel® Xeon® Scalable Processors that will assist
 - `Intel® Software Optimization for Theano* <https://ai.intel.com/theano/>`_
 - Intel AI platforms and technologies that become available in the future
 
+Sign up to for DevCloud access by `registering <https://software.intel.com/en-us/ai-academy/devcloud>`_ and by `joining <https://software.intel.com/en-us/ai/sign-up>`_ the Intel® AI Academy.
+
 When you gain access to the DevCloud, you will log into a Linux-based head node of a batch farm. There you can stage your code and data, compile, and submit jobs to a queue. Once the queued job completes, your results will be in your home folder.
 
 - Jobs are scheduled on Intel® Xeon® Scalable Processors.
 - Each processor has 24 cores with 2-way hyper-threading.
-- Each processor has access to 96 GB of on-platform RAM (DDR4
+- Each processor has access to 96 GB of on-platform RAM (DDR4)
 - Only one job will run on any processor at a time.
 - You will get 200 GB of file storage quota.
 - Your home directory is not visible to other users.
@@ -67,6 +69,8 @@ Nothing. It is free to the members of `Intel® AI Academy. <https://software.int
    ml_projects
 
    python_tools
+
+   faq
 
    resources
 

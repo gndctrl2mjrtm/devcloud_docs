@@ -1,5 +1,5 @@
-More Resources
-==============
+Resources and Help
+==================
 
 Intel AI Academy
 ################

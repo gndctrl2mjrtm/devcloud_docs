@@ -1,0 +1,695 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Frequently Asked Questions &mdash; Intel DevCloud 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Resources and Help" href="resources.html" />
+    <link rel="prev" title="Python Tools" href="python_tools.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html">
+          
+
+          
+            
+            <img src="_static/logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Developer Resources:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Get Started with the Intel DevCloud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="connect.html">How to Connect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="job.html">Basic Job Submission</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multi_job.html">Running Multiple Jobs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data.html">Data Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="languages.html">Programming Languages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ml_frameworks.html">Supported Machine Learning Frameworks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ml_projects.html">Included Machine Learning Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_tools.html">Python Tools</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Frequently Asked Questions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#general">General</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#how-can-i-improve-deep-learning-performance-when-my-framework-is-running-in-the-background">How can I improve deep learning performance when my framework is running in the background?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#who-can-request-access-to-the-intel-ai-devcloud">Who can request access to the Intel AI DevCloud?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-do-i-become-a-member-of-the-intel-ai-academy">How do I become a member of the Intel® AI Academy?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#what-happens-once-i-have-received-access">What happens once I have received access?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#i-dont-live-in-the-united-states-can-i-still-get-access-to-the-intel-ai-devcloud">I don’t live in the United States. Can I still get access to the Intel AI DevCloud?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-much-do-i-have-to-pay-to-use-the-intel-ai-devcloud">How much do I have to pay to use the Intel AI DevCloud?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#is-cuda-installed-on-the-intel-ai-devcloud">Is CUDA* installed on the Intel AI DevCloud?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#why-do-i-get-permission-denied-when-i-try-to-run-a-pip-install-package-name">Why do I get permission denied when I try to run a pip install &lt;Package_Name&gt;?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#executing-jobs">Executing Jobs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#how-do-i-check-whether-im-on-login-node-or-compute-node">How do I check whether I’m on login node or compute node?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-do-i-check-the-logs-of-my-running-job">How do I check the logs of my running job?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-do-i-check-the-logs-of-my-completed-job">How do I check the logs of my completed job?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-do-i-set-total-wall-clock-time-to-the-maximum-on-the-intel-ai-devcloud">How do I set total wall clock time to the maximum on the Intel AI DevCloud?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-do-i-query-a-job">How do I query a job?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-do-i-increase-the-wall-clock-time">How do I increase the wall clock time?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-do-i-get-the-full-information-about-a-job">How do I get the full information about a job?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-do-i-delete-a-job">How do I delete a job?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-do-i-find-the-architecture-and-features-of-the-compute-nodes-available-to-me">How do I find the architecture and features of the compute nodes available to me?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-do-i-log-in-to-a-compute-node">How do I log in to a compute node?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-do-i-get-details-of-the-nodes">How do I get details of the nodes?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#why-do-i-get-a-memory-error-while-running-commands">Why do I get a memory error while running commands?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#my-job-takes-more-than-24-hours-to-run-but-the-intel-ai-devcloud-has-a-maximum-wall-clock-time-of-24-hours-how-do-i-run-my-job-in-this-case">My job takes more than 24 hours to run, but the Intel® AI DevCloud has a maximum wall clock time of 24 hours. How do I run my job in this case?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#login-node-versus-compute-node">Login Node versus Compute Node</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#what-is-the-difference-between-login-node-and-compute-node">What is the difference between login node and compute node?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-are-the-login-and-compute-nodes-placed-on-the-intel-ai-devcloud">How are the login and compute nodes placed on the Intel® AI DevCloud?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#why-cant-i-run-compute-intensive-tasks-on-the-login-node">Why can’t I run compute-intensive tasks on the login node?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-do-i-check-to-see-whether-im-on-login-node-or-compute-node">How do I check to see whether I’m on login node or compute node?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-do-i-run-compute-intensive-jobs">How do I run compute-intensive jobs?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#what-is-the-difference-between-batch-qsub-mode-and-interactive-qsub-mode-for-job-submission">What is the difference between batch qsub mode and interactive qsub mode for job submission?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-do-i-enter-interactive-qsub-mode">How do I enter interactive qsub mode?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#when-should-i-use-batch-qsub-mode-and-when-should-i-use-interactive-qsub-mode">When should I use batch qsub mode and when should I use interactive qsub mode?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-do-i-check-job-status-and-logs-in-qsub-mode-versus-interactive-qsub-mode">How do I check job status and logs in qsub mode versus interactive qsub mode?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#adjust-gpu-specific-configurations-for-a-cpu">Adjust GPU-Specific Configurations for a CPU</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#can-i-run-tensorflow-with-graphics-processing-unit-gpu-support-on-the-intel-ai-devcloud">Can I run TensorFlow* with graphics processing unit (GPU) support on the Intel® AI DevCloud?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-do-i-convert-gpu-specific-configurations-for-a-cpu">How do I convert GPU-specific configurations for a CPU?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-do-i-change-the-code-snippet-from-gpu-to-cpu-in-the-deep-learning-frameworks">How do I change the code snippet from GPU to CPU in the deep learning frameworks?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#what-are-the-configuration-changes-that-i-need-to-set-while-building-caffe-in-cpu-mode">What are the configuration changes that I need to set while building Caffe* in CPU mode?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-do-i-install-tensorflow-in-cpu-mode">How do I install TensorFlow* in CPU mode?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-do-i-install-pytorch-in-cpu-mode">How do I install PyTorch* in CPU mode?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-do-i-change-the-configuration-when-building-apache-mxnet-in-cpu-mode">How do I change the configuration when building Apache MXNet* in CPU mode?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-do-i-install-keras-in-cpu-mode">How do I install Keras in CPU mode?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#jupyterhub-terminal-versus-ssh-terminal">JupyterHub* Terminal versus SSH Terminal</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#how-do-i-log-in-to-the-jupyterhub-terminal">How do I log in to the JupyterHub* terminal?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-do-i-log-in-to-the-ssh-terminal">How do I log in to the SSH terminal?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#what-is-the-difference-between-a-jupyterhub-terminal-and-an-ssh-terminal">What is the difference between a JupyterHub terminal and an SSH terminal?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#i-submitted-a-job-through-a-jupyterhub-terminal-why-cant-i-see-the-job-logs">I submitted a job through a JupyterHub terminal. Why can’t I see the job logs?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="resources.html">Resources and Help</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Intel DevCloud</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Frequently Asked Questions</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/faq.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="frequently-asked-questions">
+<h1>Frequently Asked Questions<a class="headerlink" href="#frequently-asked-questions" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="general">
+<h2>General<a class="headerlink" href="#general" title="Permalink to this headline">¶</a></h2>
+<p>Review these high-level questions and answers to get started with the Intel AI DevCloud and AI.</p>
+<div class="section" id="how-can-i-improve-deep-learning-performance-when-my-framework-is-running-in-the-background">
+<h3>How can I improve deep learning performance when my framework is running in the background?<a class="headerlink" href="#how-can-i-improve-deep-learning-performance-when-my-framework-is-running-in-the-background" title="Permalink to this headline">¶</a></h3>
+<p>In some situations, deep learning code with default settings does not take advantage of the full compute capability of the underlying machine on which it runs, especially when the code runs on Intel® Xeon® Scalable processors. Intel created optimization techniques that enable optimal CPU performance for popular frameworks like Caffe* and TensorFlow*. For more information, see <a class="reference external" href="https://software.intel.com/en-us/articles/tips-to-improve-performance-for-popular-deep-learning-frameworks-on-multi-core-cpus">Tips to Improve Performance for Popular Deep Learning Frameworks on CPUs</a>.</p>
+</div>
+<div class="section" id="who-can-request-access-to-the-intel-ai-devcloud">
+<h3>Who can request access to the Intel AI DevCloud?<a class="headerlink" href="#who-can-request-access-to-the-intel-ai-devcloud" title="Permalink to this headline">¶</a></h3>
+<p>Developers, data scientists, professors, students, start-ups, and others who are members of Intel® AI Academy are eligible to request access.</p>
+</div>
+<div class="section" id="how-do-i-become-a-member-of-the-intel-ai-academy">
+<h3>How do I become a member of the Intel® AI Academy?<a class="headerlink" href="#how-do-i-become-a-member-of-the-intel-ai-academy" title="Permalink to this headline">¶</a></h3>
+<p>You can join the AI Academy by requesting access to the DevCloud <a class="reference external" href="https://software.intel.com/en-us/ai-academy/devcloud">here</a>. or you can become a member by <a class="reference external" href="https://software.intel.com/en-us/ai/sign-up">registering</a>.</p>
+</div>
+<div class="section" id="what-happens-once-i-have-received-access">
+<h3>What happens once I have received access?<a class="headerlink" href="#what-happens-once-i-have-received-access" title="Permalink to this headline">¶</a></h3>
+<p>Once you gain access, you will log on to a Linux*-based head node of a batch farm. There, you can stage your code and data, compile it, and then submit jobs to a queue. Once the queued job completes, your results will be in your home ($HOME) directory.</p>
+<ul class="simple">
+<li>Jobs are scheduled on Intel® Xeon® Scalable processors.</li>
+<li>Each processor has 24 cores with two-way hyperthreading.</li>
+<li>Each processor has access to 96 GB of on-platform RAM (DDR4).</li>
+<li>Only one job will run on any processor at a time.</li>
+<li>You will get 200 GB of file storage quota.</li>
+<li>Your home directory is not visible to other users.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Once your access period expires, your home directory on the cluster will be deleted.</p>
+</div>
+</div>
+<div class="section" id="i-dont-live-in-the-united-states-can-i-still-get-access-to-the-intel-ai-devcloud">
+<h3>I don’t live in the United States. Can I still get access to the Intel AI DevCloud?<a class="headerlink" href="#i-dont-live-in-the-united-states-can-i-still-get-access-to-the-intel-ai-devcloud" title="Permalink to this headline">¶</a></h3>
+<p>The Intel AI DevCloud is available to all members of the Intel AI Academy, and is accessible from any country.</p>
+</div>
+<div class="section" id="how-much-do-i-have-to-pay-to-use-the-intel-ai-devcloud">
+<h3>How much do I have to pay to use the Intel AI DevCloud?<a class="headerlink" href="#how-much-do-i-have-to-pay-to-use-the-intel-ai-devcloud" title="Permalink to this headline">¶</a></h3>
+<p>Nothing. It is free to the members of <a class="reference external" href="https://software.intel.com/en-us/ai-academy">Intel® AI Academy.</a>  To <a class="reference external" href="https://software.intel.com/en-us/ai/sign-up">join</a>  the AI Academy is also free.</p>
+</div>
+<div class="section" id="is-cuda-installed-on-the-intel-ai-devcloud">
+<h3>Is CUDA* installed on the Intel AI DevCloud?<a class="headerlink" href="#is-cuda-installed-on-the-intel-ai-devcloud" title="Permalink to this headline">¶</a></h3>
+<p>No. The Intel AI DevCloud consists of high-performing Intel® Xeon® Gold 6128 processors but does not include CUDA*.</p>
+</div>
+<div class="section" id="why-do-i-get-permission-denied-when-i-try-to-run-a-pip-install-package-name">
+<h3>Why do I get permission denied when I try to run a pip install &lt;Package_Name&gt;?<a class="headerlink" href="#why-do-i-get-permission-denied-when-i-try-to-run-a-pip-install-package-name" title="Permalink to this headline">¶</a></h3>
+<p>To install a package using the default Python* format, use the following with pip:</p>
+<p>–user parameter</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pip</span> <span class="n">install</span> <span class="n">numpy</span> <span class="o">--</span><span class="n">user</span>
+</pre></div>
+</div>
+<p>The other option is to create a new Conda* environment, activate it, and then perform the pip* or Conda installations in that environment. Multiple versions of the same package in the default Python format can create problems. To avoid these problems, create separate Conda environments for each activity.</p>
+</div>
+</div>
+<div class="section" id="executing-jobs">
+<h2>Executing Jobs<a class="headerlink" href="#executing-jobs" title="Permalink to this headline">¶</a></h2>
+<p>To help developers execute jobs on the Intel AI DevCloud, type the following answers into the command line in Linux*.</p>
+<div class="section" id="how-do-i-check-whether-im-on-login-node-or-compute-node">
+<h3>How do I check whether I’m on login node or compute node?<a class="headerlink" href="#how-do-i-check-whether-im-on-login-node-or-compute-node" title="Permalink to this headline">¶</a></h3>
+<p>Check the prompt of your terminal.</p>
+<p>If it shows [<a class="reference external" href="mailto:uxxxx&#37;&#52;&#48;c009">uxxxx<span>&#64;</span>c009</a> ~]$, you are on the login node.</p>
+<p>If it shows something like [<a class="reference external" href="mailto:uxxxx&#37;&#52;&#48;c009-n0xx">uxxxx<span>&#64;</span>c009-n0xx</a> ~]$, you are on the compute node.</p>
+</div>
+<div class="section" id="how-do-i-check-the-logs-of-my-running-job">
+<h3>How do I check the logs of my running job?<a class="headerlink" href="#how-do-i-check-the-logs-of-my-running-job" title="Permalink to this headline">¶</a></h3>
+<p>You can check the logs of your running job as follows:
+For output logs, use qpeek:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">qpeek</span> <span class="o">-</span><span class="n">o</span> <span class="o">&lt;</span><span class="n">JOB_ID</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>For error logs:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">qpeek</span> <span class="o">-</span><span class="n">e</span> <span class="o">&lt;</span><span class="n">JOB_ID</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="how-do-i-check-the-logs-of-my-completed-job">
+<h3>How do I check the logs of my completed job?<a class="headerlink" href="#how-do-i-check-the-logs-of-my-completed-job" title="Permalink to this headline">¶</a></h3>
+<p>Check your completed job logs as follows:</p>
+<ul class="simple">
+<li>If you gave a name when submitting a job using qsub, the log files will be &lt;JOB_NAME&gt;.o&lt;JOB_ID&gt; and &lt;JOB_NAME&gt;.e&lt;JOB_ID&gt;</li>
+<li>If you did not give a name and you submitted a job as qsub &lt;JOB_SCRIPT&gt;, the log files are &lt;<a href="#id1"><span class="problematic" id="id2">JOB_</span></a> SCRIPT&gt;.o&lt;JOB_ID&gt; and &lt;<a href="#id3"><span class="problematic" id="id4">JOB_</span></a> SCRIPT&gt;.e&lt;JOB_ID&gt;</li>
+<li>If you did not give a name and you submitted a job as &lt;COMMAND&gt; | qsub, the log files are STDIN.o&lt;JOB_ID&gt; and STDIN.e&lt;JOB_ID&gt;</li>
+</ul>
+</div>
+<div class="section" id="how-do-i-set-total-wall-clock-time-to-the-maximum-on-the-intel-ai-devcloud">
+<h3>How do I set total wall clock time to the maximum on the Intel AI DevCloud?<a class="headerlink" href="#how-do-i-set-total-wall-clock-time-to-the-maximum-on-the-intel-ai-devcloud" title="Permalink to this headline">¶</a></h3>
+<p>In the command line, type one of the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">echo</span> <span class="n">python</span> <span class="o">&lt;</span><span class="n">sample</span><span class="o">.</span><span class="n">py</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">l</span> <span class="n">walltime</span><span class="o">=</span><span class="mi">24</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span> <span class="o">|</span> <span class="n">qsub</span>
+</pre></div>
+</div>
+<p>Add wall time in bash script before running in qsub mode:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="ch">#!/bin/sh#PBS -l walltime=24:00:00 python sample.py</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="how-do-i-query-a-job">
+<h3>How do I query a job?<a class="headerlink" href="#how-do-i-query-a-job" title="Permalink to this headline">¶</a></h3>
+<p>In the command line, type:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">qpeek</span> <span class="o">-</span><span class="n">o</span> <span class="o">&lt;</span><span class="n">JOBID</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>If this doesn’t return any results, it is possible that the job is complete and qpeek did not get a chance to peek.</p>
+<p>Alternatively run qsub with the “-k oe” option:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">qsub</span> <span class="o">-</span><span class="n">k</span> <span class="n">oe</span> <span class="n">my_script</span>
+</pre></div>
+</div>
+<p>Standard input/output and error will be dumped into your home directory. You can check at any time while jobs are running.</p>
+</div>
+<div class="section" id="how-do-i-increase-the-wall-clock-time">
+<h3>How do I increase the wall clock time?<a class="headerlink" href="#how-do-i-increase-the-wall-clock-time" title="Permalink to this headline">¶</a></h3>
+<p>In the command line, type one of the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1">#PBS -l walltime=&lt;10:30&gt;,mem=320kb</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">echo</span> <span class="n">sleep</span> <span class="mi">1000</span> <span class="o">|</span> <span class="n">qsub</span> <span class="o">-</span><span class="n">l</span> <span class="n">walltime</span><span class="o">=&lt;</span><span class="mi">00</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mi">00</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="how-do-i-get-the-full-information-about-a-job">
+<h3>How do I get the full information about a job?<a class="headerlink" href="#how-do-i-get-the-full-information-about-a-job" title="Permalink to this headline">¶</a></h3>
+<p>In the command line, type:
+&gt;&gt;&gt; qstat -f &lt;JOBID&gt;</p>
+</div>
+<div class="section" id="how-do-i-delete-a-job">
+<h3>How do I delete a job?<a class="headerlink" href="#how-do-i-delete-a-job" title="Permalink to this headline">¶</a></h3>
+<p>In the command line, type:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">qdel</span> <span class="o">&lt;</span><span class="n">JOBID</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="how-do-i-find-the-architecture-and-features-of-the-compute-nodes-available-to-me">
+<h3>How do I find the architecture and features of the compute nodes available to me?<a class="headerlink" href="#how-do-i-find-the-architecture-and-features-of-the-compute-nodes-available-to-me" title="Permalink to this headline">¶</a></h3>
+<p>Run the following command in the login node:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pbsnodes</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="how-do-i-log-in-to-a-compute-node">
+<h3>How do I log in to a compute node?<a class="headerlink" href="#how-do-i-log-in-to-a-compute-node" title="Permalink to this headline">¶</a></h3>
+<p>In the command line, type:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; qsub –I
+</pre></div>
+</div>
+</div>
+<div class="section" id="how-do-i-get-details-of-the-nodes">
+<h3>How do I get details of the nodes?<a class="headerlink" href="#how-do-i-get-details-of-the-nodes" title="Permalink to this headline">¶</a></h3>
+<p>In the command line, type:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pbsnodes</span> <span class="o">-</span><span class="n">a</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="why-do-i-get-a-memory-error-while-running-commands">
+<h3>Why do I get a memory error while running commands?<a class="headerlink" href="#why-do-i-get-a-memory-error-while-running-commands" title="Permalink to this headline">¶</a></h3>
+<p>In most cases, memory error is caused by trying to run compute-intensive tasks on the login node. In such cases, log in to the compute node using qsub –I and execute your commands there.</p>
+</div>
+<div class="section" id="my-job-takes-more-than-24-hours-to-run-but-the-intel-ai-devcloud-has-a-maximum-wall-clock-time-of-24-hours-how-do-i-run-my-job-in-this-case">
+<h3>My job takes more than 24 hours to run, but the Intel® AI DevCloud has a maximum wall clock time of 24 hours. How do I run my job in this case?<a class="headerlink" href="#my-job-takes-more-than-24-hours-to-run-but-the-intel-ai-devcloud-has-a-maximum-wall-clock-time-of-24-hours-how-do-i-run-my-job-in-this-case" title="Permalink to this headline">¶</a></h3>
+<p>The maximum wall clock time is set to 24 hours to ensure fair utilization of cluster resources by all. However, some workarounds are provided:</p>
+<ul class="simple">
+<li>Save the model at regular intervals or at least once before the wall time expires. At the end of 24 hours, submit a new job that will load the last saved model, and then start training from there.</li>
+</ul>
+<p>By saving the model at regular intervals, your additional benefits include getting copies of your trained model early and evaluating the model on test data. This also helps to understand how the model is performing and to make any changes early enough instead of waiting for a long job to complete.</p>
+<p>Your code may not be fully using the compute resources. For popular frameworks TensorFlow* and Caffe*, see <a class="reference external" href="https://communities.intel.com/docs/DOC-112392">Optimization Tips for Popular Deep Learning Frameworks</a>.</p>
+</div>
+</div>
+<div class="section" id="login-node-versus-compute-node">
+<h2>Login Node versus Compute Node<a class="headerlink" href="#login-node-versus-compute-node" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="what-is-the-difference-between-login-node-and-compute-node">
+<h3>What is the difference between login node and compute node?<a class="headerlink" href="#what-is-the-difference-between-login-node-and-compute-node" title="Permalink to this headline">¶</a></h3>
+<p>Login node uses a lightweight general purpose processor. Compute node uses an Intel® Xeon® Gold 6128 processor that is capable of handling heavy workloads. All of the tasks that need extensive memory and compute resources have to be run on compute node not on login node.</p>
+</div>
+<div class="section" id="how-are-the-login-and-compute-nodes-placed-on-the-intel-ai-devcloud">
+<h3>How are the login and compute nodes placed on the Intel® AI DevCloud?<a class="headerlink" href="#how-are-the-login-and-compute-nodes-placed-on-the-intel-ai-devcloud" title="Permalink to this headline">¶</a></h3>
+<p>The following diagram illustrates the overall architecture of Intel® AI DevCloud:</p>
+<a class="reference internal image-reference" href="_images/devcloud_diagram.png"><img alt="_images/devcloud_diagram.png" src="_images/devcloud_diagram.png" style="width: 600pt;" /></a>
+</div>
+<div class="section" id="why-cant-i-run-compute-intensive-tasks-on-the-login-node">
+<h3>Why can’t I run compute-intensive tasks on the login node?<a class="headerlink" href="#why-cant-i-run-compute-intensive-tasks-on-the-login-node" title="Permalink to this headline">¶</a></h3>
+<p>Login node is lightweight and not capable of handling heavy workloads. It is primarily intended to save your data; hence, a limit is enforced on both memory and compute on login nodes. This ensures that a memory error is thrown if you try to run any heavy tasks on the login node.</p>
+</div>
+<div class="section" id="how-do-i-check-to-see-whether-im-on-login-node-or-compute-node">
+<h3>How do I check to see whether I’m on login node or compute node?<a class="headerlink" href="#how-do-i-check-to-see-whether-im-on-login-node-or-compute-node" title="Permalink to this headline">¶</a></h3>
+<p>You are on the compute node if the prompt shows n0xx:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; [u556@c009-n014 ~]$
+</pre></div>
+</div>
+<p>If the prompt does not display n0xx, you are on the login node, as illustrated in the following image:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; [u556@c009 ~]$
+</pre></div>
+</div>
+</div>
+<div class="section" id="how-do-i-run-compute-intensive-jobs">
+<h3>How do I run compute-intensive jobs?<a class="headerlink" href="#how-do-i-run-compute-intensive-jobs" title="Permalink to this headline">¶</a></h3>
+<p>You can run jobs on the compute node with any of the following options:</p>
+<ul class="simple">
+<li>Submit a job using qsub &lt;JOB_SCRIPT&gt;from the login node. The job waits in the queue until the scheduler picks it up and finally runs it on the compute node.</li>
+<li>Run the job in interactive mode using qsub –I. This creates a job with default settings and provides you with a terminal from the compute node. You can directly run the commands there.</li>
+<li>Use JupyterHub*. To do this, navigate to Colfax Research. Sign in, and then and start the server. Create a new notebook and run the code from there.</li>
+<li>Use qsub from JupyterHub. To do this, navigate to Colfax Research. Log in, and then and start the server. Create a new notebook. Submit the job using the qsub command. Details are available in the Welcome.ipynb file in the home folder of Intel AI DevCloud.</li>
+<li>Directly run from JupyterHub terminal. To do this, navigate to Colfax Research. Log in, and then and start the server. Start a new terminal, which is a compute node where you can directly run the commands of a compute-intensive job in the terminal. (For more details on starting a new terminal, see JupyterHub Terminal Versus SSH Terminal).</li>
+<li>Using qsub from the JupyterHub terminal. To do this, submit the job using “qsub &lt;JOB_SCRIPT&gt;” from the JupyterHub terminal. This submits the job, and the job waits in the queue until the scheduler picks it up and executes it on compute node.</li>
+</ul>
+</div>
+<div class="section" id="what-is-the-difference-between-batch-qsub-mode-and-interactive-qsub-mode-for-job-submission">
+<h3>What is the difference between batch qsub mode and interactive qsub mode for job submission?<a class="headerlink" href="#what-is-the-difference-between-batch-qsub-mode-and-interactive-qsub-mode-for-job-submission" title="Permalink to this headline">¶</a></h3>
+<p>In batch qsub mode, jobs are created and submitted using the command “qsub &lt;JOB_SCRIPT&gt;” from the login node. &lt;JOB_SCRIPT&gt; contains the job commands.</p>
+<p>In interactive qsub mode, a job is created using the command “qsub –I”.</p>
+<p>After executing this command you get a new terminal from the compute node allocated for your job. You can then run job commands directly in the terminal.</p>
+</div>
+<div class="section" id="how-do-i-enter-interactive-qsub-mode">
+<h3>How do I enter interactive qsub mode?<a class="headerlink" href="#how-do-i-enter-interactive-qsub-mode" title="Permalink to this headline">¶</a></h3>
+<p>When using SSH (secure shell) to access the Intel AI DevCloud with a PuTTY*/Linux* terminal, enter the login node first. To run a job in interactive qsub mode, type qsub –I. This creates a new job and provides a terminal from the compute node allocated for this job.</p>
+<p>–code:: bash</p>
+<blockquote>
+<div><p>[<a class="reference external" href="mailto:u14092&#37;&#52;&#48;c009">u14092<span>&#64;</span>c009</a> ~]$ qsub -I
+qsub: waiting for job 195250.c009 to start
+qsub: job 195250.c009 ready</p>
+<p>#      Date:           Thu Nov 15 15:12:07 PST 2018
+#    Job ID:           195250.c009
+#      User:           u14092
+# Resources:           neednodes=1:ppn=2,nodes=1:ppn=2,vmem=92gb,walltime=06:00:00
+########################################################################</p>
+<p>[<a class="reference external" href="mailto:u14092&#37;&#52;&#48;c009-n024">u14092<span>&#64;</span>c009-n024</a> ~]$</p>
+</div></blockquote>
+</div>
+<div class="section" id="when-should-i-use-batch-qsub-mode-and-when-should-i-use-interactive-qsub-mode">
+<h3>When should I use batch qsub mode and when should I use interactive qsub mode?<a class="headerlink" href="#when-should-i-use-batch-qsub-mode-and-when-should-i-use-interactive-qsub-mode" title="Permalink to this headline">¶</a></h3>
+<p>Use batch qsub mode when you have a tested running code and need to run it and store the results.</p>
+<p>Use interactive qsub mode when you are still in the process of creating a running code and expect errors.</p>
+<p>You can fix them simultaneously, just as if you were doing it on a local machine.</p>
+</div>
+<div class="section" id="how-do-i-check-job-status-and-logs-in-qsub-mode-versus-interactive-qsub-mode">
+<h3>How do I check job status and logs in qsub mode versus interactive qsub mode?<a class="headerlink" href="#how-do-i-check-job-status-and-logs-in-qsub-mode-versus-interactive-qsub-mode" title="Permalink to this headline">¶</a></h3>
+<p>In qsub mode, you can submit the job, work on other things, and then come back later to check for updates. Check your job status with the qstat command, and check logs using the log file/qpeek command.</p>
+<p>In interactive qsub mode, once the terminal has expired, the logs written while the job or command was running are deleted.</p>
+</div>
+</div>
+<div class="section" id="adjust-gpu-specific-configurations-for-a-cpu">
+<h2>Adjust GPU-Specific Configurations for a CPU<a class="headerlink" href="#adjust-gpu-specific-configurations-for-a-cpu" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="can-i-run-tensorflow-with-graphics-processing-unit-gpu-support-on-the-intel-ai-devcloud">
+<h3>Can I run TensorFlow* with graphics processing unit (GPU) support on the Intel® AI DevCloud?<a class="headerlink" href="#can-i-run-tensorflow-with-graphics-processing-unit-gpu-support-on-the-intel-ai-devcloud" title="Permalink to this headline">¶</a></h3>
+<p>The Intel® AI DevCloud is a cluster of Intel® Xeon® Scalable processor high-performance CPUs. We need to make sure that code written for a GPU-specific environment is converted to make the execution possible with CPUs.</p>
+</div>
+<div class="section" id="how-do-i-convert-gpu-specific-configurations-for-a-cpu">
+<h3>How do I convert GPU-specific configurations for a CPU?<a class="headerlink" href="#how-do-i-convert-gpu-specific-configurations-for-a-cpu" title="Permalink to this headline">¶</a></h3>
+<p>You can do this in one of two ways:</p>
+<ul class="simple">
+<li>While building the framework, change the configuration settings from GPU to CPU</li>
+<li>Comment or change the code snippets that are written specifically for GPUs.</li>
+</ul>
+</div>
+<div class="section" id="how-do-i-change-the-code-snippet-from-gpu-to-cpu-in-the-deep-learning-frameworks">
+<h3>How do I change the code snippet from GPU to CPU in the deep learning frameworks?<a class="headerlink" href="#how-do-i-change-the-code-snippet-from-gpu-to-cpu-in-the-deep-learning-frameworks" title="Permalink to this headline">¶</a></h3>
+<p>For C++:</p>
+<p>Remove the following lines of code in the file detection_loss_layer.cpp (folder: src/caffe/layers):
+.. code :: bash</p>
+<blockquote>
+<div>#ifdef CPU_ONLY STUB_GPU(DetectionLossLayer); #endif</div></blockquote>
+<p>For PyTorch*:</p>
+<p>Remove the occurrences of .cuda to switch from a GPU to a CPU.</p>
+<p>For example:</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">available</span><span class="p">():</span>
+
+        <span class="kn">import</span> <span class="nn">torch.cuda</span>
+
+<span class="k">else</span><span class="p">:</span>
+
+        <span class="kn">import</span> <span class="nn">torch</span>
+</pre></div>
+</div>
+<p>To comment or change the code snippets that are written specifically for GPUs, see some of the examples on GitHub for Caffe*-Yolo*.</p>
+</div>
+<div class="section" id="what-are-the-configuration-changes-that-i-need-to-set-while-building-caffe-in-cpu-mode">
+<h3>What are the configuration changes that I need to set while building Caffe* in CPU mode?<a class="headerlink" href="#what-are-the-configuration-changes-that-i-need-to-set-while-building-caffe-in-cpu-mode" title="Permalink to this headline">¶</a></h3>
+<p>Clone the Intel® Optimization for Caffe* from GitHub*.
+Make the following configuration changes to build Caffe on the CPU:</p>
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CPU_ONLY</span><span class="p">:</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># in Makefile.configuration</span>
+
+<span class="n">solver_mode</span><span class="p">:</span> <span class="n">CPU</span> <span class="c1"># in solver.prototxt</span>
+</pre></div>
+</div>
+<p>The Intel AI DevCloud has the CPU version of Faster R-CNN also available with the latest version of Intel Optimization for Caffe.</p>
+</div>
+<div class="section" id="how-do-i-install-tensorflow-in-cpu-mode">
+<h3>How do I install TensorFlow* in CPU mode?<a class="headerlink" href="#how-do-i-install-tensorflow-in-cpu-mode" title="Permalink to this headline">¶</a></h3>
+<p>For details, refer to the TensorFlow* installation guide.</p>
+<p>To install, see Intel® Optimization for TensorFlow* (CPU only) through PIP*, conda*, or from source.</p>
+</div>
+<div class="section" id="how-do-i-install-pytorch-in-cpu-mode">
+<h3>How do I install PyTorch* in CPU mode?<a class="headerlink" href="#how-do-i-install-pytorch-in-cpu-mode" title="Permalink to this headline">¶</a></h3>
+<p>Go to PyTorch, and then select the criteria that matches your environment, which includes CUDA=None, and then run the corresponding command. For example:</p>
+<ol class="arabic simple">
+<li>When using conda on the CPU, use this command:</li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">conda</span> <span class="n">install</span> <span class="n">pytorch</span><span class="o">-</span><span class="n">cpu</span> <span class="n">torchvision</span><span class="o">-</span><span class="n">cpu</span> <span class="o">-</span><span class="n">c</span> <span class="n">pytorch</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li>When using PIP on the CPU, do the following:</li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">user</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">download</span><span class="o">.</span><span class="n">pytorch</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">whl</span><span class="o">/</span><span class="n">cpu</span><span class="o">/</span><span class="n">torch</span><span class="o">-</span><span class="mf">0.4</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">cp27</span><span class="o">-</span><span class="n">cp27mu</span><span class="o">-</span><span class="n">linux_x86_64</span><span class="o">.</span><span class="n">whl</span><span class="o">%</span><span class="mi">20</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">user</span> <span class="n">torchvision</span>
+</pre></div>
+</div>
+<p>If the above install does not work, as Python* 2.7 UCS2 is already installed, use this command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">user</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">download</span><span class="o">.</span><span class="n">pytorch</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">whl</span><span class="o">/</span><span class="n">cpu</span><span class="o">/</span><span class="n">torch</span><span class="o">-</span><span class="mf">0.4</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">cp27</span><span class="o">-</span><span class="n">cp27m</span><span class="o">-</span><span class="n">linux_x86_64</span><span class="o">.</span><span class="n">whl</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="how-do-i-change-the-configuration-when-building-apache-mxnet-in-cpu-mode">
+<h3>How do I change the configuration when building Apache MXNet* in CPU mode?<a class="headerlink" href="#how-do-i-change-the-configuration-when-building-apache-mxnet-in-cpu-mode" title="Permalink to this headline">¶</a></h3>
+<p>Clone the source code for Apache MXNet*:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">apache</span><span class="o">/</span><span class="n">incubator</span><span class="o">-</span><span class="n">mxnet</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
+<p>Set the following fields in make/config.mk to build Apache MXNet on the CPU:</p>
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">USE_CUDA</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">USE_CUDA_PATH</span> <span class="o">=</span> <span class="n">NONE</span>
+<span class="n">USE_CUDNN</span> <span class="o">=</span> <span class="mi">0</span>
+</pre></div>
+</div>
+<p>After installing it, you need to edit some lines of code that are specific to the GPU. For example, in the speech recognition use case in the folder path incubator-mxnet/example.speech_recognition:</p>
+<ol class="arabic simple">
+<li>Remove the following line in main.py:</li>
+</ol>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;MXNET_ENABLE_GPU_P2P&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;0&quot;</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li>Change the line below in deepspeech.cfg:</li>
+</ol>
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">context</span> <span class="o">=</span> <span class="n">gpu0</span><span class="p">,</span><span class="n">gpu1</span><span class="p">,</span><span class="n">gpu2</span>
+</pre></div>
+</div>
+<p>Change to:</p>
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">context</span> <span class="o">=</span> <span class="n">cpu0</span><span class="p">,</span><span class="n">cpu1</span><span class="p">,</span><span class="n">cpu2</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="how-do-i-install-keras-in-cpu-mode">
+<h3>How do I install Keras in CPU mode?<a class="headerlink" href="#how-do-i-install-keras-in-cpu-mode" title="Permalink to this headline">¶</a></h3>
+<p>Keras can be installed in CPU mode by using backend as TensorFlow-CPU or Theano-CPU.</p>
+<p>The command to install Keras is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pip</span> <span class="n">install</span> <span class="n">keras</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cd</span> <span class="o">.</span><span class="n">keras</span>
+</pre></div>
+</div>
+<p>Specify the backend in the file keras.json:</p>
+<div class="code bash highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+
+<span class="s2">&quot;image_data_format&quot;</span><span class="p">:</span> <span class="s2">&quot;channels_last&quot;</span><span class="p">,</span>
+
+<span class="s2">&quot;epsilon&quot;</span><span class="p">:</span> <span class="mf">1e-07</span><span class="p">,</span>
+
+<span class="s2">&quot;floatx&quot;</span><span class="p">:</span> <span class="s2">&quot;float32&quot;</span><span class="p">,</span>
+
+<span class="s2">&quot;backend&quot;</span><span class="p">:</span> <span class="s2">&quot;tensorflow” }</span>
+</pre></div>
+</div>
+<p>For further information, see <a class="reference external" href="https://keras.io/backend/">Keras documentation on backends</a>.</p>
+</div>
+</div>
+<div class="section" id="jupyterhub-terminal-versus-ssh-terminal">
+<h2>JupyterHub* Terminal versus SSH Terminal<a class="headerlink" href="#jupyterhub-terminal-versus-ssh-terminal" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="how-do-i-log-in-to-the-jupyterhub-terminal">
+<h3>How do I log in to the JupyterHub* terminal?<a class="headerlink" href="#how-do-i-log-in-to-the-jupyterhub-terminal" title="Permalink to this headline">¶</a></h3>
+<p>Go to Colfax Research.
+Enter your user ID and password in the Login page. Your user ID is available in the Intel® AI DevCloud welcome email. The password is the unique user ID (UUID) also included in the welcome email.
+The image below shows the home directory contents that are displayed after signing in.</p>
+<a class="reference internal image-reference" href="_images/jupyter.png"><img alt="_images/jupyter.png" src="_images/jupyter.png" style="width: 600pt;" /></a>
+<p>To open a new terminal, in the right corner, select New, and then select Terminal. The Jupyter Notebook* terminal appears on the compute node. Jupyter notebook terminal on compute node</p>
+</div>
+<div class="section" id="how-do-i-log-in-to-the-ssh-terminal">
+<h3>How do I log in to the SSH terminal?<a class="headerlink" href="#how-do-i-log-in-to-the-ssh-terminal" title="Permalink to this headline">¶</a></h3>
+<p>Follow the instructions in the Intel AI DevCloud welcome email link.</p>
+<p>(<a class="reference external" href="https://access.colfaxresearch.com/?uuid=xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxx">https://access.colfaxresearch.com/?uuid=xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxx</a>). If the sign in is successful, a SSH terminal appears.</p>
+</div>
+<div class="section" id="what-is-the-difference-between-a-jupyterhub-terminal-and-an-ssh-terminal">
+<h3>What is the difference between a JupyterHub terminal and an SSH terminal?<a class="headerlink" href="#what-is-the-difference-between-a-jupyterhub-terminal-and-an-ssh-terminal" title="Permalink to this headline">¶</a></h3>
+<p>The differences are:</p>
+<ol class="arabic simple">
+<li>Execution time</li>
+</ol>
+<p>A JupyterHub* terminal has a maximum session time of four hours. After that time, the session is terminated without leaving a log.</p>
+<p>An SSH terminal gives a default wall clock time of six hours for jobs submitted using qsub. These default settings can be altered to provide a maximum of 24 hours wall clock time.</p>
+<ol class="arabic simple" start="2">
+<li>Job logs</li>
+</ol>
+<p>A JupyterHub terminal does not currently provide a qpeek tool, which is used to get near real-time job logs. Also, job logs may not be properly written due to session expiry.</p>
+<p>An SSH terminal does provide a qpeek tool. You can check near real-time job logs of a running job with qpeek –o &lt;JOB_ID&gt; (output logs) and qpeek –e &lt;JOB_ID&gt; (error logs).</p>
+<ol class="arabic simple" start="3">
+<li>Logged-in terminal</li>
+</ol>
+<p>The JupyterHub terminal signs in to the compute node directly .</p>
+<p>The SSH terminal signs in to the login node directly. Enter qsub –I to go to the compute node.</p>
+</div>
+<div class="section" id="i-submitted-a-job-through-a-jupyterhub-terminal-why-cant-i-see-the-job-logs">
+<h3>I submitted a job through a JupyterHub terminal. Why can’t I see the job logs?<a class="headerlink" href="#i-submitted-a-job-through-a-jupyterhub-terminal-why-cant-i-see-the-job-logs" title="Permalink to this headline">¶</a></h3>
+<p>A JupyterHub session expires at the end of four hours. Remaining time is displayed in the top right of the session page. Jobs longer than four hours are stopped at the end of the session time and logs are not properly written. For jobs longer than four hours, use qsub mode with a PuTTY or Linux SSH terminal. In these cases, we suggest you use qsub mode with a PuTTY* or Linux* SSH terminal.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="resources.html" class="btn btn-neutral float-right" title="Resources and Help" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="python_tools.html" class="btn btn-neutral" title="Python Tools" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Intel(r) Coporation
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>  
+
+  <style>
+    /* Sidebar header (and topbar for mobile) */
+    .wy-side-nav-search, .wy-nav-top {
+      background: #ffffff;
+    }
+    /* Sidebar */
+    .wy-nav-side {
+      background: #0661A9;
+    }
+  </style>
+
+
+</body>
+</html>

@@ -97,18 +97,6 @@ To use Theano, run the following to copy the '.theanorc' file.
 
 Theano available on the cluster uses the Intel git repository for Theano.
 
-Neon
-----
-
-Neon is already built into the Intel Distribution for Python installed on the cluster.
-
-By default, Neon uses Intel Distribution for Python 2. If Python 3 is preferred, change the following line in the '~/.bash_profile' script from 'python2' to 'python3'
-
->>> export PATH=/glob/intel-python/python2/bin/:$PATH
-
-You will have to either log out/back in or run the following for the changes to take effect:
-
->>> [u21356@c009 ~] source ~/.bash_profile
 
 Mxnet
 -----
